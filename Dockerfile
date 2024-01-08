@@ -1,6 +1,5 @@
 FROM ubuntu:latest
 USER root
-RUN strace -f apt update 2>&1|grep key|grep docker-archive-keyring
 RUN apt-get update && apt-get install -y python3-pip python3-dev build-essential
 
 WORKDIR /app
