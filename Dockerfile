@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 USER root
+RUN chmod a+r /usr/share/keyrings/docker-archive-keyring.gpg
 RUN apt-get update && apt-get install -y python3-pip python3-dev build-essential
 
 WORKDIR /app
